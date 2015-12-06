@@ -13,7 +13,7 @@ RSpec.describe Movie, type: :model do
                 expect(Movie.all_movies_with_same_director('testing')).to eq([@movie_with_director, @movie_with_director2])
             end
             it 'it should not find movies by different directors' do
-                expect(Movie.all_movies_with_same_director('testing')).not_to eq([@movie_with_dimovie_with__different_directorrector, @movie_without_director])
+                expect(Movie.all_movies_with_same_director('testing')).not_to eq([@movie_with__different_director, @movie_without_director])
             end
         end
      end
