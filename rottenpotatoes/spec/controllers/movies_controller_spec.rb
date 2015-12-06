@@ -23,9 +23,8 @@ describe MoviesController do
     end
     describe 'When the specified movie has no director' do
       it 'should redirect to the root page' do
-        Movie.stub(:all_movies_with_same_director).and_return(@fake_results)
         get :match, {:id => 2}
-        response.should render_template('movies')
+        response.should redirect_to('/movies')
       end
     end
 end
